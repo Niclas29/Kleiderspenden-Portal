@@ -1,0 +1,69 @@
+.header-main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #FFFFFF;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2)
+}
+
+.container-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 60px; /* Anpassen je nach tatsächlicher Logo-Größe */
+}
+
+.container-titel-überschrift{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.4em;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-titel-überschrift h1{
+    font-size: 2em;
+    color : #333;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    gap: 20px;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 0.5rem;
+    position: relative;
+  }
+  
+  .link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background: #333;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .link::before {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .link:hover::before {
+    transform: scaleX(1);
+  }

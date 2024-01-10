@@ -1,0 +1,20 @@
+hr {
+    border: 0;
+    height: 0.1em;
+    background-color: #333; /* Farbe der Linie */
+    margin: 20px 20px; /* Abstand oben und unten */
+    width: 100%;
+}
+
+.img-container {
+    position: relative;
+    height: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    background-image: url('assets/img/slum.jpg');
+    background-size: cover; /* Stellt sicher, dass das Bild den Container füllt */
+}
+
