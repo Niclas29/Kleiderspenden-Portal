@@ -1,0 +1,52 @@
+.div-main-content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom : 4em;
+}
+
+.div-anleitung{
+    display: flex;
+    flex-direction: row;
+}
+
+.div-elememt_anleitung{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4em 2em;
+    padding: 2em,2em;
+    width: 25%;
+    height : 5em;
+    h1{
+        font-size: 1.5em;
+        margin-left: 2em;
+    }
+}
+
+.div-headline-anleitung{
+    display: flex;
+    margin: 2em 3em;
+    padding: 2em,2em;
+
+    h1{
+        font-size: 1.7em;
+    }
+}
+
+.div-mat-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+mat-icon{
+    transform: scale(4);
+    color : #333;
+}
+
+hr {
+    border: 0;
+    height: 0.05em;
+    background-color: #333; /* Farbe der Linie */
+    width :95%
+}

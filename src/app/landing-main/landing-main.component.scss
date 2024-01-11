@@ -1,9 +1,22 @@
 hr {
-    border: 0;
-    height: 0.1em;
-    background-color: #333; /* Farbe der Linie */
-    margin: 20px 20px; /* Abstand oben und unten */
-    width: 100%;
+    border: none;
+    border-top: 1px solid #333; /* Standardmäßige Trennlinie */
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.main-div{
+    background-color: #e06666;
+}
+
+.div-trennlinie{
+    margin : 1em 2em;
+}
+
+.div-main-content{
+    display: flex;
+    flex-direction: column;
+    width : 100%;
+    background-color: var(--main-bg-color);
 }
 
 .img-container {
@@ -14,7 +27,99 @@ hr {
     align-items: center;
     overflow: hidden;
     width: 100%;
-    background-image: url('assets/img/slum.jpg');
+    background-image: url('/assets/img/slum.jpg');
     background-size: cover; /* Stellt sicher, dass das Bild den Container füllt */
 }
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Weiß mit 50% Transparenz */
+    z-index: 1; /* Legt das Pseudo-Element hinter den Inhalt des Containers */
+}
+
+.img-container img{
+    width: 100%;
+    display: block;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px 20px; 
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay-text h1{
+    font-size: 5em;
+    color : black;
+}
+
+
+.div-overlay-spenden-button{
+    position: absolute;
+    top: 85%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px 20px; 
+    text-align: center;
+    z-index: 2;
+}
+
+.div-overlay-spenden-button button{
+    font-size: 2em;
+    padding: 0.3em 0.9em;
+    border-radius: 2em;
+    border : 0.1em solid #333;
+    background-color: #e06666;
+    opacity: 85%;
+}
+
+.div-overlay-spenden-button button:hover{
+    font-size: 2em;
+    padding: 0.3em 0.9em;
+    border-radius: 2em;
+    border : 0.1em solid red;
+    background-color: #f4cccc;
+    opacity: 85%;
+}
+
+.div-motivation-text{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    padding-left: 1em;  
+}
+
+.div-motivation-text h1{
+    font-size: 1.7em;
+    padding-top: 1.5em;
+}
+
+.div-motivation-text p{
+    font-size: 1.2em;
+    color: #333; /* Textfarbe */
+    line-height: 1.6; /* Zeilenhöhe */
+    text-align: justify; /* Textausrichtung */
+    margin-top: 0;
+    width : 80%;
+    background-color: var(--main-bg-color);
+}
+   
+.div-main-top-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 2em;
+    background-color: var(--main-bg-color);
+}
+
+
 

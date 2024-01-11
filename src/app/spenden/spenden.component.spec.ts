@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingMainComponent } from './landing-main.component';
+import { SpendenComponent } from './spenden.component';
 
-describe('LandingMainComponent', () => {
-  let component: LandingMainComponent;
-  let fixture: ComponentFixture<LandingMainComponent>;
+describe('SpendenComponent', () => {
+  let component: SpendenComponent;
+  let fixture: ComponentFixture<SpendenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LandingMainComponent]
+      imports: [SpendenComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LandingMainComponent);
+    fixture = TestBed.createComponent(SpendenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

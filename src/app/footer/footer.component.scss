@@ -1,0 +1,100 @@
+
+
+.div-footer{
+    display: flex;
+    flex-direction: row;
+    width : 100%;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.div-footer-kontakt{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 4em;
+
+    p{
+        margin : 0.2em 0;
+        font-size: 1em;
+    }
+}
+
+.div-footer-social{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding: 2em 4em;
+    justify-items: flex-start;
+}
+
+.div-footer-social-copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+    padding-left:1em;
+
+    p{
+        font-size: 1em;
+        margin-right: 0.6em;
+    }
+}
+
+.div-footer-info{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 4em;
+}
+
+.div-footer-social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.div-footer-info ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+    gap: 0.6em;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    position: relative;
+    transition: transform 0.3s ease; /* Glatte Animation beim Hovern */
+    display: inline-block; /* Erlaubt die Transformation */
+  }
+
+.link:hover {
+    opacity: 50%;
+    transform: scale(1.1);
+}
+
+h2{
+    margin : 0.6em 0;
+}
+
+h4{
+    margin : 0.3em 0;
+}
+
+.div-mat-icon{
+    padding: 2em 2em;
+}
+
+.icon-social{
+    font-size: 3em;
+    color: #333;
+}
+
+.icon-social:hover{
+    opacity: 50%;
+    scale: (1.3);
+}
+
