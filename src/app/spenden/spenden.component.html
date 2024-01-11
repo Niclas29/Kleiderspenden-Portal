@@ -1,1 +1,79 @@
-<p>spenden works!</p>
+<div class='div-main-spenden'>
+  <div class="div-reg-form">
+      <div [@fadeIn]="eventKontaktForm" class="wrapper-kontakt" >
+          <div class="div-form-text">
+            <h2>Kleiderspende registrieren</h2>
+            <p>Wir freuen uns, dass Sie bereit sind, Kleiderspenden zu registrieren und uns zu unterstützen.
+              Bitte nehmen Sie sich einen Moment Zeit, um Ihre Kontaktdaten mit uns zu teilen, 
+              damit wir Ihre großzügige Spende ordnungsgemäß verwalten können.
+            </p>
+          </div>
+          <form [formGroup]="spendenKontaktFormular" class="form-spenden">
+            <!-- Felder Vorname -->
+            <mat-form-field appearance="fill" class="form-item">
+              <mat-label>Vorname</mat-label>
+              <input matInput id="vorname" formControlName="vorName">
+            </mat-form-field>
+            <!-- Felder Nachname -->
+            <mat-form-field appearance="fill" class="form-item">
+              <mat-label>Nachname</mat-label>
+              <input matInput id="nachname" formControlName="nachName">
+            </mat-form-field>
+            <!-- Felder Email -->
+            <mat-form-field appearance="fill" class="form-item">
+              <mat-label>Email</mat-label>
+              <input matInput id="email" type="email" formControlName="emailAdresse">
+            </mat-form-field>
+            <button (click)="onFormSenden()" type="submit">Weiter</button>
+          </form>
+      </div>
+
+
+      <div [@fadeIn]="eventKleidungsArt" class="wrapper-art" >
+      <!-- Dropdown für Kleidungsauswahl -->
+      <form [formGroup]="spendenArtDerKleidungFormular" class="form-spenden">
+        <mat-form-field appearance="fill" class="form-item">
+          <mat-label>Art der Kleidung</mat-label>
+          <mat-select id="art-der-kleidung" formControlName="kleidungsArt">
+            <!-- Auswahlmöglichkeiten Oberteile -->
+            <mat-optgroup label="Oberteile">
+              <mat-option value="T-Shirt">T-Shirts</mat-option>
+              <mat-option value="Hemd">Hemd</mat-option>
+              <mat-option value="Bluse">Bluse</mat-option>
+              <mat-option value="Pullover">Pullover</mat-option>
+              <mat-option value="Jacke">Jacke</mat-option>
+              <mat-option value="Sonstiges Oberteil">Sonstiges Oberteil</mat-option>
+            </mat-optgroup>
+            <!-- Auswahlmöglichkeiten Unterteile -->
+            <mat-optgroup label="Unterteile">
+              <mat-option value="Jeans">Jeans</mat-option>
+              <mat-option value="Hose">Hose</mat-option>
+              <mat-option value="Rock">Rock</mat-option>
+              <mat-option value="Shorts">Shorts</mat-option>
+              <mat-option value="Leggings">Leggins</mat-option>
+              <mat-option value="Jogging-Hose">Jogging-Hose</mat-option>
+              <mat-option value="Sonstiges Unterteil">Sonstiges Unterteil</mat-option>
+          </mat-optgroup>
+          <mat-optgroup label="Schuhe">
+              <mat-option value="Turnschuhe">Turnschuhe</mat-option>
+              <mat-option value="Stiefel">Stiefel</mat-option>
+              <mat-option value="Sandalen">Sandalen</mat-option>
+              <mat-option value="Halbschuhe">Halbschuhe</mat-option>
+              <mat-option value="High Heels">High Heels</mat-option>
+              <mat-option value="Sonstiger Schuhe">Sonstiges Unterteil</mat-option>
+          </mat-optgroup>
+          <mat-optgroup label="Spezielle Kleidung">
+              <mat-option value="Arbeitskleidung">Arbeitskleidung</mat-option>
+              <mat-option value="Sportbekleidung">Sportbekleidung</mat-option>
+              <mat-option value="Kostüme">Kostüme</mat-option>
+          </mat-optgroup>
+          </mat-select>
+        </mat-form-field>
+        <button (click)="onFormSenden()" type="submit">Weiter</button>
+        </form>
+    </div>
+
+    
+    </div>
+  </div>
+  

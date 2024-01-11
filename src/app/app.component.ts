@@ -1,15 +1,18 @@
+
 import { Component, ElementRef, ViewChild, HostListener, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import {FooterComponent} from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,RouterModule,HeaderComponent,FooterComponent,HomeComponent],
+  imports: [CommonModule,RouterOutlet,RouterModule,HeaderComponent,FooterComponent,HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

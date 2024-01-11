@@ -1,0 +1,103 @@
+.div-main-spenden {
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+
+}
+
+.div-wrapper{
+    width : 100%;
+    height: 100%;
+}
+
+.div-reg-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+    width: 40%;
+    padding: 20px; /* Fügen Sie padding für Abstand hinzu */
+    margin: 5em 0;
+    box-shadow: 1em 1em 0.5em rgba(0,0,0,0.2);
+    border-radius: 1em;
+    border: 0.03em solid #333;
+ 
+}
+
+.div-form-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    h2{
+        font-size: 2.1em;
+        color: #333; /* Textfarbe */
+    }
+
+    p{
+        font-size: 1.0em;
+        color: #333; /* Textfarbe */
+        line-height: 1.6; /* Zeilenhöhe */
+        text-align: justify; /* Textausrichtung */
+        margin-top: 1.6em;
+        width : 80%;
+    }
+}
+
+.form-spenden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column; /* Ändern Sie von "row" zu "column" für vertikale Anordnung */
+    align-items: center;
+    justify-items: center;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 80%;
+}
+
+.form-item label {
+    margin-bottom: 0.5em; /* Ändern Sie "margin-right" zu "margin-bottom" für Abstand unterhalb der Labels */
+}
+
+.form-item input {
+    width: 100%;
+}
+
+.form-item select {
+    width: 100%;
+}
+
+.form-item:last-child {
+    margin-bottom: 4em;
+}
+
+mat-optgroup {
+    font-weight: bold;
+}
+
+button{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width :80%;
+    height : 2.3em;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 1em;
+    color :#fff;
+    background-color: #583bfc;
+    opacity: 90%;
+}
+
+button:hover{
+    opacity: 65%;
+}

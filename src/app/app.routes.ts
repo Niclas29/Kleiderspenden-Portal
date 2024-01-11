@@ -1,4 +1,4 @@
-import { RouterModule,Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { SpendenComponent } from './spenden/spenden.component';
 import { HomeComponent } from './home/home.component';
 
