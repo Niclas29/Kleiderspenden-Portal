@@ -1,0 +1,22 @@
+{
+    "24":{
+        "strasse":"Alte Landstrasse",
+        "hausNr":"29a",
+        "ort":"Kiel",
+        "plz":"24107"
+    },
+
+    "30":{
+        "strasse":"Deisterstraße",
+        "hausNr":"3",
+        "ort":"Hannover",
+        "plz":"30449"
+    },
+
+    "42":{
+        "strasse":"Blumenstraße",
+        "hausNr":"54",
+        "ort":"Wuppertal",
+        "plz":"42119"
+    }
+}
