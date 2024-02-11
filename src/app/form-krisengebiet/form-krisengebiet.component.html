@@ -1,0 +1,24 @@
+<div class="wrapper-versand" >
+    <div class="div-form-text">
+        <h2>Krisengebiet auswählen</h2>
+        <p>
+            Hier können Sie selbst entscheiden, in welches Krisengebiet ihre Kleiderspende gespendet wird. 
+        </p>
+    </div>
+
+    <div class="div-forms">
+        <div class="div-auswahl">
+            <div class="div-auswahl-gebiet" 
+                *ngFor="let gebiet of krisengebiete"
+                [class.selected]="gebiet === ausgewaehltes_krisengebiet"
+                (click)="onAuswahlKrisengebiet(gebiet)">
+                {{gebiet}}
+            </div>
+        </div>
+    </div>
+   
+
+    <button class="btn-weiter" (click)="onFormSenden()">Weiter</button>
+
+
+</div>

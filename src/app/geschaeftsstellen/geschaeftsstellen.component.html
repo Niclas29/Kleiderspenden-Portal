@@ -1,0 +1,21 @@
+<div class="div-main-geschaeft">
+    <div class="div-cards" >
+        <mat-card *ngFor="let item of geschaeftsStellen | keyvalue">
+            <mat-card-header>
+              <mat-card-title>{{geschaeftsStellen[item.key]['stadt']}}</mat-card-title>
+              <mat-card-subtitle>{{geschaeftsStellen[item.key]['stadtTeil']}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="assets/img/geschaeftsstellen/{{geschaeftsStellen[item.key].imgPath}}" alt="Bild von Hamburg">
+            <mat-card-content>
+                <div class="adress-zeile">
+                    <i class="fa-solid fa-location-dot icon"></i>
+                    <p>{{geschaeftsStellen[item.key]['anschrift']}}</p>
+                </div>
+                <div class="adress-zeile">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <p>{{geschaeftsStellen[item.key]['telefonNr']}}</p>
+                </div>
+            </mat-card-content>
+          </mat-card>          
+    </div>
+</div>

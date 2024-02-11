@@ -47,6 +47,38 @@ mat-icon{
 hr {
     border: 0;
     height: 0.05em;
-    background-color: #333; /* Farbe der Linie */
+    background-color: #333; 
     width :95%
+}
+
+
+@media (max-width : 1200px){
+.div-headline-anleitung{
+    line-height: 1.7;
+    width: 80%;
+    margin: 0em 3em;
+    padding: 1em,2em;
+
+    h1{
+        font-size: 1.2em;
+    }
+}
+
+.div-anleitung{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-elememt_anleitung{
+    justify-content: space-between;
+    margin: 1em 2em;
+    padding: 2em,2em;
+    width: 50%;
+    height : 5em;
+    h1{
+        font-size: 1em;
+        margin-left: 5em;
+    }
+}
 }

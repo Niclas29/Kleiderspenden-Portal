@@ -1,0 +1,79 @@
+<div class="wrapper-kleidungsart" >
+    <div class="div-form-text">
+    <h2>Kleidungsstücke auswählen</h2>
+    <p>Bitte wählen Sie aus den unten aufgeführten Optionen – von Oberbekleidung 
+        wie T-Shirts und Pullover bis hin zu spezieller Kleidung wie Arbeits- oder Sportbekleidung. 
+        Jedes Kleidungsstück zählt und hilft uns dabei, Bedürftigen in unserer Gemeinschaft zu helfen. 
+        Vielen Dank für Ihre Großzügigkeit und Unterstützung!
+    </p>
+    </div>
+
+    <div class="div-hinzufuegen">
+        <form [formGroup]="spendenArtDerKleidungFormular" class="form-spenden">
+            <mat-form-field appearance="fill" class="form-item">
+                <mat-label>Art der Kleidung</mat-label>
+                <mat-select id="art-der-kleidung" formControlName="kleidungsArt">
+                <!-- Auswahlmöglichkeiten Oberteile -->
+                <mat-optgroup label="Oberteile">
+                    <mat-option value="T-Shirt">T-Shirts</mat-option>
+                    <mat-option value="Hemd">Hemd</mat-option>
+                    <mat-option value="Bluse">Bluse</mat-option>
+                    <mat-option value="Pullover">Pullover</mat-option>
+                    <mat-option value="Jacke">Jacke</mat-option>
+                    <mat-option value="Sonstiges Oberteil">Sonstiges Oberteil</mat-option>
+                </mat-optgroup>
+                <!-- Auswahlmöglichkeiten Unterteile -->
+                <mat-optgroup label="Unterteile">
+                    <mat-option value="Jeans">Jeans</mat-option>
+                    <mat-option value="Hose">Hose</mat-option>
+                    <mat-option value="Rock">Rock</mat-option>
+                    <mat-option value="Shorts">Shorts</mat-option>
+                    <mat-option value="Leggings">Leggins</mat-option>
+                    <mat-option value="Jogging-Hose">Jogging-Hose</mat-option>
+                    <mat-option value="Sonstiges Unterteil">Sonstiges Unterteil</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Schuhe">
+                    <mat-option value="Turnschuhe">Turnschuhe</mat-option>
+                    <mat-option value="Stiefel">Stiefel</mat-option>
+                    <mat-option value="Sandalen">Sandalen</mat-option>
+                    <mat-option value="Halbschuhe">Halbschuhe</mat-option>
+                    <mat-option value="High Heels">High Heels</mat-option>
+                    <mat-option value="Sonstiger Schuhe">Sonstiges Unterteil</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Spezielle Kleidung">
+                    <mat-option value="Arbeitskleidung">Arbeitskleidung</mat-option>
+                    <mat-option value="Sportbekleidung">Sportbekleidung</mat-option>
+                    <mat-option value="Kostüme">Kostüme</mat-option>
+                </mat-optgroup>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-item">
+                <mat-label>Anzahl</mat-label>
+                <input matInput id="anzahl" type="number" formControlName="anzahl">
+            </mat-form-field>
+            <mat-error *ngIf="spendenArtDerKleidungFormular.get('anzahl')?.invalid && spendenArtDerKleidungFormular.get('anzahl')?.touched">
+                1 - 999 Stück
+            </mat-error>
+            <button (click)="onKleidungHinzufuegen()" type="submit" class="btn-hinzufuegen">Hinzufügen</button>
+        </form>
+        <!-- Hier sollen alle hinzugefügten Kleidungsstücke angezeigt werden -->
+        <div class="div-show-kleidungsstücke">
+            <ul>
+                <!-- In hinzugefuegteKleidungsstuecke befindet sich für jedes hinzugefügte Element ein Array [kleidungsart,anzahl] -->
+                <li *ngFor="let item of hinzugefuegteKleidungsstuecke" class="list-item">
+                    <i class="material-icons btn-icon">arrow_forward</i>
+                    <div class="item-left">{{ item[1] + 'x ' }}{{ item[0] }}</div>
+                    <!-- Jedes Element soll noch einen Button enthalten, um es ggf. wieder raus zu löschen -->
+                    <i class="material-icons btn-icon" (click)="entferneKleidungsstueck(item)">close</i>
+                  
+                </li>
+              </ul>
+              
+        </div>
+    </div>
+
+    <button class="btn-weiter" (click)="onKleidungAuswahlFertig()">Weiter</button>
+
+
+</div>

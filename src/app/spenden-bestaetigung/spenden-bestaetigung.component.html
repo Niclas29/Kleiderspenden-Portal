@@ -1,0 +1,40 @@
+<div *ngIf="zusammenfassung" class="wrapper-bestaetigung">
+    <h2>Zusammenfassung Ihrer Spende</h2>
+    <p class="subtext">Vielen Dank für Ihre Kleiderspende. Sie haben Ihren Teil erfüllt. Nun sorgen wir dafür, dass ihr Spende im gewählten Krisengebiet sicher ankommt!</p>
+    <div class="daten-zusammenfassung">
+        <div class="kontakdaten">
+            <h4>Kontaktdaten:</h4>
+            <p>Vorname: {{ zusammenfassung.Kontaktdaten.vorname }}</p>
+            <p>Nachname: {{ zusammenfassung.Kontaktdaten.nachname }}</p>
+            <p>Email: {{ zusammenfassung.Kontaktdaten.email }}</p>
+            <hr>
+        </div>
+       
+        <div class="versandart">
+            <h4>Versand:</h4>
+            <p>Versandart: {{ zusammenfassung.Versandart.art }}</p>
+            <p *ngIf="zusammenfassung.Versandart.art != 'Übergabe'">Strasse: {{ zusammenfassung.Versandart.strasse }}</p>
+            <p *ngIf="zusammenfassung.Versandart.art != 'Übergabe'">Hausnummer: {{ zusammenfassung.Versandart.hausnummer }}</p>
+            <p *ngIf="zusammenfassung.Versandart.art != 'Übergabe'">Postleitzahl: {{ zusammenfassung.Versandart.plz }}</p>
+            <p *ngIf="zusammenfassung.Versandart.art != 'Übergabe'">Ort: {{ zusammenfassung.Versandart.ort }}</p>
+            <hr>
+        </div>
+        
+        <div class="kleidungsart">
+            <h4>Kleidungsart: </h4>
+            <div *ngFor="let kleidungsstueck of zusammenfassung.Kleidungsart.kleidungsstuecke">
+                <ul>
+                    <li>{{ kleidungsstueck[0]}} {{ kleidungsstueck[1] }}x</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        
+        <div class="krisengebiet">
+            <h4>Gewähltes Krisengebiet: </h4>
+            <p>{{ zusammenfassung.Krisengebiet.krisengebiet }}</p>
+        </div>
+    </div>
+    <button class="btn-weiter" routerLink="/home">Zurück zur Startseite</button>
+  </div>
+  

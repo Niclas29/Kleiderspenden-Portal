@@ -1,0 +1,64 @@
+<div class="wrapper-versand" >
+    <div class="div-form-text">
+        <h2>Art der Kleiderspende wählen</h2>
+        <p>Sie haben die Möglichkeit, Ihre Kleidung bequem von zu Hause abholen zu lassen 
+            oder sie persönlich zu einer unserer Geschäftsstellen zu bringen.
+        </p>
+    </div>
+
+    <div class="div-forms">
+        <form [formGroup]="spendenVersand" class="form-radio-btns">
+            <mat-radio-group [formControl]="spendenVersand.controls['versandAuswahl']">
+                <mat-radio-button [value]="option1">Ich bin vor Ort (Abgabe an Geschäftsstelle)</mat-radio-button>
+                <mat-radio-button [value]="option2">Ich möchte meine Spenden durch ein Sammelfahrzeug abholen lassen</mat-radio-button>
+              </mat-radio-group>
+        </form>
+
+        <form [formGroup]="spendenVersandAbholung" class="form-spenden">
+            <!-- Felder Vorname -->
+            <mat-form-field appearance="fill" class="form-item">
+                <mat-label>Straße</mat-label>
+                <input matInput id="strasse" type="text" formControlName="strasse">
+                <!-- Fehlermeldung, wenn vorname nicht eingegeben wurde -->
+                <mat-error *ngIf="spendenVersandAbholung.get('strasse')?.invalid && spendenVersandAbholung.get('strasse')?.touched">
+                    Straße ist erforderlich.
+                </mat-error>
+            </mat-form-field>
+            <!-- Felder Nachname -->
+            <mat-form-field appearance="fill" class="form-item">
+                <mat-label>Hausnummer</mat-label>
+                <input matInput id="hausNr" text="text" formControlName="hausNr">
+                <!-- Fehlermeldung, wenn nachname nicht eingegeben wurde -->
+                <mat-error *ngIf="spendenVersandAbholung.get('hausNr')?.invalid && spendenVersandAbholung.get('hausNr')?.touched">
+                    Hausnummer ist erforderlich.
+                </mat-error>
+            </mat-form-field>
+            <!-- Felder Email -->
+            <mat-form-field appearance="fill" class="form-item">
+                <mat-label>PLZ</mat-label>
+                <input matInput id="plz" type="text" formControlName="plz">
+                <!-- Fehlermeldung, wenn email nicht eingegeben wurde -->
+                <mat-error *ngIf="spendenVersandAbholung.get('plz')?.invalid && spendenVersandAbholung.get('plz')?.touched">
+                    Postleitzahl ist erforderlich.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="form-item">
+                <mat-label>Ort</mat-label>
+                <input matInput id="ort" type="text" formControlName="ort">
+                <!-- Fehlermeldung, wenn email nicht eingegeben wurde -->
+                <mat-error *ngIf="spendenVersandAbholung.get('ort')?.invalid && spendenVersandAbholung.get('ort')?.touched">
+                    Ort ist erforderlich.
+                </mat-error>
+            </mat-form-field>
+            </form>
+
+
+
+    </div>
+   
+
+    <button class="btn-weiter" (click)="onFormSenden()">Weiter</button>
+
+
+</div>

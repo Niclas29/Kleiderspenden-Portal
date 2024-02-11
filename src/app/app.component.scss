@@ -4,6 +4,7 @@ app-header{
     left:0;
     width:100vw;
     z-index: 1000;/* Header soll immer ganz vorne sein und alles überdecken */
+    overflow-x: hidden;
 }
 
 
