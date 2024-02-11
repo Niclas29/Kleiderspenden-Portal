@@ -1,4 +1,8 @@
-# MyFirstProject
+# Kleiderspenden - Portal 
+
+Webanwendungsoberfläche für Fallstudie zum Thema : Kleiderspenden- Registrierung 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
