@@ -50,7 +50,7 @@ export class FormKleidungsartComponent {
   }
 
   onKleidungAuswahlFertig(){
-    console.log(this.hinzugefuegteKleidungsstuecke);
+    // console.log(this.hinzugefuegteKleidungsstuecke);
     if(this.hinzugefuegteKleidungsstuecke.length >= 1){
       this.callSpenden.emit(this.hinzugefuegteKleidungsstuecke);
     }else{

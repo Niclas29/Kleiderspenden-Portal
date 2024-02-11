@@ -43,22 +43,22 @@ export class SpendenDatenService {
 
   setKontaktdaten(data : Kontaktdaten){
     this.kontaktdaten = data;
-    console.log(this.kontaktdaten)
+    // console.log(this.kontaktdaten)
   }
 
   setVersandart(data : Versandart){
     this.versandart = data;
-    console.log(this.versandart);
+    // console.log(this.versandart);
   }
 
   setKleidungsart(data : Kleidungsart){
     this.kleidungsart = data;
-    console.log(this.kleidungsart);
+    // console.log(this.kleidungsart);
   }
 
   setKrisengebiet(data : Krisengebiet){
     this.krisengebiet = data;
-    console.log(this.krisengebiet)
+    // console.log(this.krisengebiet)
   }
 
   getZusammenfassung(){
