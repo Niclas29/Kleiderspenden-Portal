@@ -4,6 +4,22 @@ Webanwendungsoberfläche für Fallstudie zum Thema : Kleiderspenden- Registrieru
 
 Webseite => https://niclas29.github.io/Kleiderspenden-Portal/
 
+Verwendete Bilder und Grafiken von Pixabay:
+
+Lizenz: https://pixabay.com/de/service/license-summary/
+
+Bilder:
+- https://pixabay.com/de/photos/hamburg-speicherstadt-kanal-4570577/
+- https://pixabay.com/de/photos/d%C3%BCsseldorf-medienhafen-architektur-4609385/
+- https://pixabay.com/de/photos/architektur-geb%C3%A4ude-wahrzeichen-51058/
+- https://pixabay.com/de/photos/frauenkirche-platz-dresden-1252472/
+- https://pixabay.com/de/photos/m%C3%BCnchen-marienplatz-rathaus-1572429/
+- https://pixabay.com/de/photos/geb%C3%A4ude-horizont-stadt-7092747/
+- https://pixabay.com/de/photos/ludwigskirche-saarbr%C3%BCcken-kirche-5276319/
+- https://pixabay.com/de/photos/koblenz-deutsches-eck-mosel-rhein-818636/
+- https://pixabay.com/de/photos/br%C3%BCcke-stadt-geb%C3%A4ude-pfad-stra%C3%9Fe-5621201/
+- https://pixabay.com/de/photos/xiamen-slum-stra%C3%9Fenaufnahme-824233/
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
